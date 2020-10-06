@@ -23,7 +23,7 @@ namespace RazorPagesTest.Pages
 
         public void OnGet()
         {
-            Inventory = _context.Inventory.ToList();
+            Inventory = _context.Inventories.Where(x => x.Color == "Green").ToList();
         }
     }
 }
